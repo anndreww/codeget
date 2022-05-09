@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
+
+ /* #RESET */
+ *, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li { list-style: none; }
+
+a { text-decoration: none; }
+
+a,
+img,
+span,
+input,
+label,
+button,
+ion-icon,
+textarea { display: block; }
+
+
+body {
+  background: #83a4d4;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #b6fbff, #83a4d4);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #b6fbff, #83a4d4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+
+}
+
+
+
+/* HEADER */
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 14px;
+  box-shadow: 1px 2px 5px hsla(0, 0%, 0%, 0.05);
+  height: 70px;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+  z-index: 4;
+  background: rgba(255, 255, 255, 0.27);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#header#active { height: 330px; }
+
+#header #container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#menu-toggle-btn { font-size: 30px; }
+
+#navbar {
+  position: absolute;
+  width: 100%;
+  top: 70px;
+  left: 0;
+  padding: 12px;
+  visibility: hidden;
+  opacity: 0;
+  transition: .5s ease-in-out;
+}
+
+#header#active #navbar {
+  visibility: visible;
+  opacity: 1;
+}
+
+#navbar-link,
+#header-action-link {
+  color: hsl(0, 4%, 21%);
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  padding: 8px;
+}
+
+:is(#navbar-link, #header-action-link):is(:hover, :focus) { color: rgb(36, 98, 255); }
+
+#section-title { text-align: center; }
+
+#section-text {
+  color: hsl(244, 17%, 61%);
+  font-size: 15px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+.instant-search {
+  position: relative;
+  max-width: 250px;
+  margin: 200px auto;
+  background: rgba( 255, 255, 255, 0.35 );
+
+}
+
+.instant-search,
+.instant-search__input {
+  font-family: sans-serif;
+}
+
+.instant-search,
+.instant-search * {
+  transition: background 0.15s, box-shadow 0.15s;
+}
+
+.instant-search:focus-within {
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.instant-search--loading::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: #009578;
+  border-radius: 5px;
+  animation: searchIndicator 0.5s infinite ease-in-out;
+}
+
+@keyframes searchIndicator {
+  0% {
+    width: 15%;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 15%;
+  }
+}
+
+.instant-search,
+.instant-search__input-container {
+  border-radius: 5px;
+}
+
+.instant-search__input-container {
+  display: inline-flex;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 6px;
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.instant-search__input-container:focus-within {
+  background: #ffffff;
+}
+
+.instant-search__input {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 0 6px;
+  background: transparent;
+}
+
+.instant-search__results-container {
+  max-height: 250px;
+  overflow-y: auto;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.1s, opacity 0.1s;
+}
+
+.instant-search__results-container--visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.instant-search__result {
+  display: block;
+  color: #333333;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 0.8em;
+  cursor: pointer;
+}
+
+.instant-search__result:hover {
+  background: #eeeeee;
+}
+
+.instant-search__result:not(:last-of-type) {
+  border-bottom: 1px solid #eeeeee;
+}
+
+.instant-search__title {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.instant-search__paragraph {
+  line-height: 1.5;
+  margin: 8px 0;
+}
+
+
+
+
+
+.container {
+  margin: 150px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.container-02 {
+	position: relative;
+	align-items: center;
+	height: 200px;
+  margin-bottom: 20px;
+}
+
+.container-02 .glassmorphic-card {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	z-index: 1;
+	width: 320px;
+	height: 200px;
+	margin: 28px;
+	box-shadow: 20px 20px 50px rgba(0,0,0, 0.5);
+	border-radius: 15px;
+	border-top: 1px solid rgba(255,255,255,0.5);
+	border-left: 1px solid rgba(255,255,255,0.5);
+	background: rgba(255,255,255,0.1);
+	backdrop-filter: blur(5px);
+	overflow: hidden;
+}
+.container-02 .glassmorphic-card .imgBox {
+	position: relative;
+	text-align: center;
+}
+.container-02 .glassmorphic-card .imgBox i {
+	font-size: max(80px);
+	color: rgba(255,255,255, 0.1);
+}
+.container-02 .glassmorphic-card .contentBox {
+	position: relative;
+	margin-top: 0px;
+	text-align:center;
+	transition: 0.5s;
+}
+
+.container-02 .glassmorphic-card .contentBox h3 {
+	font-size: 1.8em;
+	color: #fff;
+	z-index: 1;
+}
+.container-02 .glassmorphic-card .contentBox p {
+	font-size: 1em;
+	color: #fff;
+	font-weight: 300;
+}
+.container-02 .glassmorphic-card .contentBox a {
+	position: relative;
+	display: inline-block;
+	padding: 8px 20px;
+	margin-top: 15px;
+	background: #fff;
+	border-top: 1px solid rgba(255,255,255,0.1);
+	border-left: 1px solid rgba(255,255,255,0.1);
+	color: #000;
+	border-radius: 20px;
+	text-decoration: none;
+	font-weight: 500;
+	box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+.container-02 p {
+	z-index: 12;
+	margin: 20px auto 10px;
+	position: relative;
+	color: #fff;
+}
+
+
+
+
+
+
+
+
+@media (min-width: 992px) {
+
+  /* header */
+
+  #header {
+    overflow: visible;
+    height: unset;
+  }
+
+  #header#active { height: unset; }
+
+  #menu-toggle-btn { display: none; }
+
+  #navbar {
+    position: static;
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 60px;
+  }
+
+  #navbar a {
+    color: hsl(0, 3%, 32%);
+		font-weight: 500;
+  }
+
+  #navbar-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    gap: 14px;
+  }
+
+  #header-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+}

@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
+
+*, *::before, *::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a,
+img,
+span,
+input,
+label,
+button,
+ion-icon,
+textarea { display: block; }
+
+html {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+}
+
+body {
+  min-height: 100vh;
+  background: #0f0c29;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+ul { list-style: none; }
+
+a { text-decoration: none; }
+
+/* HEADER */
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 14px;
+  box-shadow: 1px 2px 5px hsla(0, 0%, 0%, 0.05);
+  height: 70px;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+  z-index: 4;
+  background: rgba(255, 255, 255, 0.27);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#header#active { height: 330px; }
+
+#header #container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#menu-toggle-btn { font-size: 30px; }
+
+#navbar {
+  position: absolute;
+  width: 100%;
+  top: 70px;
+  left: 0;
+  padding: 12px;
+  visibility: hidden;
+  opacity: 0;
+  transition: .5s ease-in-out;
+}
+
+#header#active #navbar {
+  visibility: visible;
+  opacity: 1;
+}
+
+#navbar-link,
+#header-action-link {
+  color: hsl(0, 12%, 65%);
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  padding: 8px;
+}
+
+:is(#navbar-link, #header-action-link):is(:hover, :focus) { color: rgb(36, 98, 255); }
+
+#section-title { text-align: center; }
+
+#section-text {
+  color: hsl(244, 17%, 61%);
+  font-size: 15px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+
+
+
+
+
+
+/* - responsive for largen than 992px screen */
+
+@media (min-width: 992px) {
+
+  /* header */
+
+  #header {
+    overflow: visible;
+    height: unset;
+  }
+
+  #header#active { height: unset; }
+
+  #menu-toggle-btn { display: none; }
+
+  #navbar {
+    position: static;
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 60px;
+  }
+
+  #navbar a {
+    color: hsl(0, 35%, 93%);
+		font-weight: 500;
+  }
+
+  #navbar-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    gap: 14px;
+  }
+
+  #header-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+}
+
+
+
+
+
+
+
+/* #CONTAINER */
+.container {
+  margin: 100px;
+}

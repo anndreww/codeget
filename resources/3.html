@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CodeGet - Learn Competitive Programming</title>
+
+<!-- 
+  - favicon
+ -->
+  <link rel="shortcut icon" href="../favicon-32x32.png" type="image/png">
+
+ <!-- 
+   - custom css link
+  -->
+  <link rel="stylesheet" href="../assets/css/resources_.css">
+
+  <!-- 
+    - google font link
+   -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;900&family=Quicksand:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- 
+  - HEADER
+ -->
+
+ <header id="header" data-header>
+  <div id="container">
+
+    <a href="../index.html" id="logo">
+      <img src="../assets/images/logo.svg" alt="CodeGet Logo">
+    </a>
+
+    <button id="menu-toggle-btn" data-nav-toggle-btn>
+      <ion-icon name="menu-outline"></ion-icon>
+    </button>
+
+    <nav id="navbar">
+      <ul id="navbar-list">
+
+        <li>
+          <a href="../resources.html" id="navbar-link">Practica</a>
+        </li>
+
+        <li>
+          <a href="../problemset.html" id="navbar-link">Probleme</a>
+        </li>
+
+        <li>
+          <a href="../index.php" id="navbar-link">Compilator</a>
+        </li>
+
+        <li>
+          <a href="#" id="navbar-link">Contact</a>
+        </li>
+
+      </ul>
+
+      <div id="header-actions">
+        <a href="#" id="header-action-link">Log In</a>
+
+        <a href="#" id="header-action-link">Inregistrare</a>
+      </div>
+    </nav>
+    
+   </div>
+ </header>
+
+
+ <div class="container">
+   <h1>Citirea standard I/O</h1>
+   <p>
+    In multe probleme de informatica, citirea standard din C++ este prea inceata pentru a ne permite sa ne incadram in limita de timp. De obicei, asta se intampla la problemele in care autorul doreste sa faca diferenta intre doua solutii care, desi au complexitati diferite, cum ar fi O(n)O(n) si O(n \log n)O(nlogn), in practica se comporta cam la fel.
+    <br><br>
+    <br><br>  
+   </p>
+
+
+   <pre class="prettyprint">
+    <code class="language-cpp">
+      #include <bits/stdc++.h>
+      using namespace std;
+  
+      const int MOD = 1e9 + 7;
+  
+      int main() {
+        int M, N;
+        cin >> M >> N;
+        int ans = 0;
+        for (int i = 0; i < N; i++) {
+          int x;
+          cin >> x;
+          ans = (ans + x) % MOD;
+          if (M == 1) {
+            cout << ans << endl;
+          }
+        }
+        if (M == 0) {
+          cout << ans << endl;
+        }
+      }
+    </code>
+    </pre>
+
+ </div>
+
+
+ <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+</body>
+</html>
