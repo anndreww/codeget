@@ -64,11 +64,11 @@
 
       </ul>
 
-      <div id="header-actions">
+      <!-- <div id="header-actions">
         <a href="#" id="header-action-link">Log In</a>
 
         <a href="#" id="header-action-link">Inregistrare</a>
-      </div>
+      </div> -->
     </nav>
     
    </div>
@@ -84,31 +84,56 @@
    </p>
 
 
-   <pre class="prettyprint">
-    <code class="language-cpp">
-      #include <bits/stdc++.h>
-      using namespace std;
-  
-      const int MOD = 1e9 + 7;
-  
-      int main() {
-        int M, N;
-        cin >> M >> N;
-        int ans = 0;
-        for (int i = 0; i < N; i++) {
-          int x;
-          cin >> x;
-          ans = (ans + x) % MOD;
-          if (M == 1) {
-            cout << ans << endl;
-          }
-        }
-        if (M == 0) {
-          cout << ans << endl;
-        }
-      }
-    </code>
-    </pre>
+   <h3 class="subtitle">Code</h3>
+   <pre class="code-block">
+    #include "iostream"
+    using namespace std;
+    
+    int main() {
+        int n;
+        long long prod = 1;
+        cin >> n;
+        
+        for(int i = 1; i <= n; ++i)
+            prod *= i;
+        
+        cout << prod;
+    
+        return 0;
+    }
+   </pre>
+
+   <br><br><br>
+   <h2>Citirea rapida</h2>
+
+   <h3>
+     <br>
+    ios::sync_with_stdio(false);
+    <br>
+    cin.tie(nullptr);</h3>
+    
+   <h3 id="margin-code" class="subtitle">Code</h3>
+   <pre class="code-block">
+    #include "iostream"
+    using namespace std;
+    
+    int main() {
+            
+        ios::sync_with_stdio(false);
+        cin.tie(nullptr);
+
+        int n;
+        long long prod = 1;
+        cin >> n;
+        
+        for(int i = 1; i <= n; ++i)
+            prod *= i;
+        
+        cout << prod;
+    
+        return 0;
+    }
+   </pre>
 
  </div>
 
