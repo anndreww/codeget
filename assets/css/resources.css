@@ -15,6 +15,13 @@ button,
 ion-icon,
 textarea { display: block; }
 
+button {
+  border: none;
+  background: none;
+  font: inherit;
+  cursor: pointer;
+}
+
 html {
   font-family: 'Poppins', sans-serif;
   color: black;
@@ -23,6 +30,10 @@ html {
 body {
   min-height: 100vh;
 }
+
+a { text-decoration: none; }
+
+li { list-style: none; }
 
 .container {
   min-height: 100vh;
@@ -250,7 +261,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-#header#active { height: 330px; }
+#header.active { height: 330px; }
 
 #header #container {
   display: flex;
@@ -271,7 +282,7 @@ body {
   transition: .5s ease-in-out;
 }
 
-#header#active #navbar {
+#header.active #navbar {
   visibility: visible;
   opacity: 1;
 }
@@ -303,39 +314,44 @@ body {
 
 
 
-nav{
+nav {
 	position: fixed;
 	top: 35%;
   left: 2%;
 	bottom: auto;
 	z-index: 10;
 }
-ul{
+
+ul {
 	list-style: none;
 	padding: 0;
 }
-.nva li{
+
+.nva li {
 	padding: 10px 0;
 }
-span{
+
+span {
 	display: inline-block;
 	position:relative;
 }
-nav a{
+
+nav.nva a {
 	display: inline-block;
 	color: #fff;
 	text-decoration: none;
 	font-size: 1em;
 	display: none;
 }
-.circle{
+
+.circle {
 	height: 10px;
 	width: 10px;
 	left: -10px;
 	border-radius: 50%;
 	background-color: rgb(152, 189, 231);
 }
-.rect{
+.rect {
 	height: 3px;
 	width: 0px;
 	left: 0;
@@ -357,7 +373,7 @@ nav .active-section .rect{
 
 
 @media (min-width: 1200px) {
-	nav a{
+	nav.nva a{
 		display: inline-block;
 	}
 
@@ -383,7 +399,7 @@ nav .active-section .rect{
     height: unset;
   }
 
-  #header#active { height: unset; }
+  #header.active { height: unset; }
 
   #menu-toggle-btn { display: none; }
 
@@ -395,6 +411,7 @@ nav .active-section .rect{
     justify-content: space-between;
     align-items: center;
     margin-left: 60px;
+    flex-direction: column-reverse;
   }
 
   #navbar a {
@@ -414,6 +431,11 @@ nav .active-section .rect{
     display: flex;
     align-items: center;
     gap: 14px;
+  }
+
+  #header #container {
+    margin: auto;
+    max-width: 1000px;;
   }
 
 }

@@ -729,6 +729,7 @@ footer .logo {
     justify-content: space-between;
     align-items: center;
     margin-left: 60px;
+    flex-direction: column-reverse;
   }
 
   .navbar a {

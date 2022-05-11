@@ -60,16 +60,16 @@
         </li>
 
         <li>
-          <a href="#contact" id="navbar-link">Contact</a>
+          <a href="./index.html#contact" id="navbar-link">Contact</a>
         </li>
 
       </ul>
-
+<!-- 
       <div id="header-actions">
         <a href="#" id="header-action-link">Log In</a>
 
         <a href="#" id="header-action-link">Inregistrare</a>
-      </div>
+      </div>  -->
     </nav>
     
    </div>
@@ -77,133 +77,51 @@
 
 
 
+<div class="contain" ng-app>
+  <div ng-controller="problemsCtrl">
 
+    <section class="header">
+      <center><h1>Cauta Probleme</h1></center>
+      <form action="" class="cont">
+        <input type="text" class="srchFld" placeholder="" ng-model="search"/>
+        <button type="submit" class="srchBtn">Cauta</button>
+        <div class="entypo-search ico"></div>
+      </form>
+    </section>
 
+    <section class="content">
+      <div class="problem" ng-repeat="problem in problems | filter:search" ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}">
 
- <div id="searchUsers" class="instant-search">
-   <div class="instant-search__input-container">
-     <input class="instant-search__input" type="text" spellcheck="false" placeholder="Search Users">
-     <i class="material-icons instant-search__icon">search</i>
-   </div>
- </div>
+        <div class="container">
+          <div class="container-02">
+            <div class="glassmorphic-card" data-tilt data-tilt data-tilt-glare data-tilt-max-glare="0.8">
+              <div class="imgBox">
+                <i class="fa fa-pencil-ruler"></i>
+              </div>
+              <div class="contentBox">
+                <h5>{{problem.id}}</h5>
+                <h3><a href="{{problem.link}}">{{problem.name}}</a></h3>
+                <p>- {{problem.source}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+  </div>
 
+</div>
+
+ 
  <script src="./assets/js/app.js"></script>
+ <script src="./assets/js/script.js"></script>
+ <script src="./assets/js/btn.js"></script>
+ <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
 
-
- <div class="container">
-   <div class="container-02">
-    <div class="glassmorphic-card" data-tilt data-tilt data-tilt-glare data-tilt-max-glare="0.8">
-      <div class="imgBox">
-        <i class="fa fa-pencil-ruler"></i>
-      </div>
-      <div class="contentBox">
-        <h3>1</h3>
-        <h3>INTRODUCERE</h3>
-        <p>Ce este Programarea Competitiva? Programarea competitiva rezolva probleme de codare folosind algoritmi si structuri de date.</p>
-        <a href="#"><span>Read More</span></a>
-      </div>
-    </div>
-   </div>
-
-   <div class="container-02">
-    <div class="glassmorphic-card" data-tilt data-tilt data-tilt-glare data-tilt-max-glare="0.8">
-      <div class="imgBox">
-        <i class="fa fa-pencil-ruler"></i>
-      </div>
-      <div class="contentBox">
-        <h3>2</h3>
-        <h3>LIMBAJE</h3>
-        <p>ssfafasfd </p>
-        <a href="#"><span>Read More</span></a>
-      </div>
-    </div>
-   </div>
-  
-   <div class="container-02">
-    <div class="glassmorphic-card" data-tilt data-tilt data-tilt-glare data-tilt-max-glare="0.8">
-      <div class="imgBox">
-        <i class="fa fa-pencil-ruler"></i>
-      </div>
-      <div class="contentBox">
-        <h3>1</h3>
-        <h3>INTRODUCERE</h3>
-        <p>Lores standard ...</p>
-        <a href="#"><span>Read More</span></a>
-      </div>
-    </div>
-   </div>
-  
-   <div class="container-02">
-    <div class="glassmorphic-card" data-tilt data-tilt data-tilt-glare data-tilt-max-glare="0.8">
-      <div class="imgBox">
-        <i class="fa fa-pencil-ruler"></i>
-      </div>
-      <div class="contentBox">
-        <h3>1</h3>
-        <h3>INTRODUCERE</h3>
-        <p>Lorem Ipsumrd ...</p>
-        <a href="#"><span>Read More</span></a>
-      </div>
-    </div>
-   </div>
-  
-   <div class="container-02">
-    <div class="glassmorphic-card" data-tilt data-tilt data-tilt-glare data-tilt-max-glare="0.8">
-      <div class="imgBox">
-        <i class="fa fa-pencil-ruler"></i>
-      </div>
-      <div class="contentBox">
-        <h3>1</h3>
-        <h3>INTRODUCERE</h3>
-        <p>Lorem Ipsum </p>
-        <a href="#"><span>Read More</span></a>
-      </div>
-    </div>
-   </div>
-  
-   <div class="container-02">
-    <div class="glassmorphic-card" data-tilt data-tilt data-tilt-glare data-tilt-max-glare="0.8">
-      <div class="imgBox">
-        <i class="fa fa-pencil-ruler"></i>
-      </div>
-      <div class="contentBox">
-        <h3>1</h3>
-        <h3>INTRODUCERE</h3>
-        <p>Lorem Ipsum i.</p>
-        <a href="#"><span>Read More</span></a>
-      </div>
-    </div>
-   </div>
-  
-   <div class="container-02">
-    <div class="glassmorphic-card" data-tilt data-tilt data-tilt-glare data-tilt-max-glare="0.8">
-      <div class="imgBox">
-        <i class="fa fa-pencil-ruler"></i>
-      </div>
-      <div class="contentBox">
-        <h3>1</h3>
-        <h3>INTRODUCERE</h3>
-        <p>Lorem Ipsum is simply du</p>
-        <a href="#"><span>Read More</span></a>
-      </div>
-    </div>
-   </div>
-
-   <div class="container-02">
-    <div class="glassmorphic-card" data-tilt data-tilt data-tilt-glare data-tilt-max-glare="0.8">
-      <div class="imgBox">
-        <i class="fa fa-pencil-ruler"></i>
-      </div>
-      <div class="contentBox">
-        <h3>1</h3>
-        <h3>INTRODUCERE</h3>
-        <p>Lorem Ipsum is simply dummy te</p>
-        <a href="#"><span>Read More</span></a>
-      </div>
-    </div>
-   </div>
-
- </div>
+ <!-- 
+   - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 
 </body>

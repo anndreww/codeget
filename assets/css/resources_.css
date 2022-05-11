@@ -15,6 +15,13 @@ button,
 ion-icon,
 textarea { display: block; }
 
+button {
+  border: none;
+  background: none;
+  font: inherit;
+  cursor: pointer;
+}
+
 html {
   font-family: 'Poppins', sans-serif;
   color: #fff;
@@ -52,7 +59,7 @@ a { text-decoration: none; }
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-#header#active { height: 330px; }
+#header.active { height: 330px; }
 
 #header #container {
   display: flex;
@@ -71,9 +78,10 @@ a { text-decoration: none; }
   visibility: hidden;
   opacity: 0;
   transition: .5s ease-in-out;
+  flex-direction: column-reverse;
 }
 
-#header#active #navbar {
+#header.active #navbar {
   visibility: visible;
   opacity: 1;
 }
@@ -99,7 +107,9 @@ a { text-decoration: none; }
 
 
 
-
+#margin-code {
+  margin-top: 50px;
+}
 
 
 
@@ -147,15 +157,42 @@ a { text-decoration: none; }
     gap: 14px;
   }
 
+  #header #container {
+    margin: auto;
+    max-width: 1000px;;
+  }
+
 }
-
-
-
-
 
 
 
 /* #CONTAINER */
 .container {
   margin: 100px;
+}
+
+
+
+
+h3{
+  color:#fff;
+  font-weight:normal;
+  border-bottom:3px solid rgba(255,255,255,0.3);
+}
+
+.container > span{
+  display:inline-block;
+  line-height:20px;
+  vertical-align:middle;
+  color:#4B4B4B;
+}
+
+.box-wrapper{
+  overflow:hidden;
+}
+
+pre {
+  background:rgba(255,255,255, 0.5);
+  color:rgba(0,0,0,1);
+  padding: 10px;
 }

@@ -1,8 +1,8 @@
 <?php
 
 	// Compile C program
-	$myfile = fopen("programs/c/testfile_c.c", "w");
-	$input =  fopen("programs/c/input_c.txt", "w");
+	$myfile = fopen("./programs/c/testfile_c.c", "w");
+	$input =  fopen("./programs/c/input_c.txt", "w");
 	$txt = $_POST['program'];
 	$_SESSION['c_program'] = $txt;
 	fwrite($myfile, $txt);
